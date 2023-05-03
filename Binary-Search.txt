@@ -20,6 +20,7 @@ using namespace std;
      // The element can be lie on the left
     
 //}
+// Time Complexity  = N/2^k = log(N)
 
 int binary_search(int arr[], int n, int key){
     // Implement binary search 
