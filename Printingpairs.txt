@@ -1,0 +1,39 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+//printing Pair : - suppose there are 4 elements : - 1,2,3,4: - Then the elements pair can be : - (1,2) (1,3) (1,4) (2,3) (2,4) (3,4)
+// for printing pairs we need two varaibles : - i and j: - i=0 and j = i+1 j will start next to i , both will undergo the <n interation to print the pairs
+int printAllPairs(int arr[], int n){
+    
+    //print all the elements
+    for(int i=0;i<n; i++){
+        int x = arr[i];
+        
+        for(int j = i+1; j<n; j++){
+            int y = arr[j];
+            cout<<x<<","<<y<<endl;
+        }
+    }
+    
+    return 0;
+}
+
+int main()
+{
+    int arr[] = {10,20,30,40,45,60,70,89};
+    
+    int n = sizeof(arr)/sizeof(int);
+    
+    // Print all the elements
+    printAllPairs(arr,n);
+    return 0;
+}
