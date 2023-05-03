@@ -1,0 +1,64 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+// Binary Search : -  we have two pointers , start and end pointer : - s = 0 and e = 0
+// while(s<=e){
+     //find mid
+     // Do comparision at mid point
+     // Then according to this condition
+     // The element can be mid 
+     // The element can lie on the right
+     // The element can be lie on the left
+    
+//}
+
+int binary_search(int arr[], int n, int key){
+    // Implement binary search 
+    int s = 0;
+    int e  = n-1;
+    
+    while(s<=e){
+        int mid = (s+e)/2;
+        
+        if(arr[mid] == key){
+            return mid;
+        }
+        else if(arr[mid] > key){
+            e = mid-1;
+        }
+        else{
+            s = mid+1;
+        }
+    }
+    
+    return -1;
+}
+
+int main()
+{
+    int arr[] = {10,20,30,40,45,60,70,89};
+    
+    int n = sizeof(arr)/sizeof(int);
+    
+    int key;
+    cin>>key;
+    
+    int index = binary_search(arr,n,key);
+    if(index!=-1){
+        cout<<key<<"is present at index"<<index<<endl;
+    }
+    else{
+        cout<<key<<"is NOT Found!"<<endl;
+    }
+
+    return 0;
+}
