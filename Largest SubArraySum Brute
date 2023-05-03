@@ -1,0 +1,47 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int largestSubarraysum(int arr[], int n){
+    
+     int largest_sum = 0;
+    for(int i=0; i<n; i++){
+        
+         
+        for(int j=i; j<n; j++){
+            
+           int subarraySum = 0;
+        for(int k=i;k<=j; k++){
+            subarraySum += arr[k];
+        }
+        
+           // put a check is subarraySum > largestsum
+           largest_sum = max(largest_sum, subarraySum);
+        }
+        
+    }
+    return largest_sum;
+}
+
+// find out the largest sum of subarray
+// Brute Force
+
+
+int main()
+{
+    int arr[] = {-2,3,4,-1,5,-12,6,1,3};  //Taking a time of n3
+    
+    int n = sizeof(arr) / sizeof(int);
+    
+   cout<<largestSubarraysum(arr,n);
+
+    return 0;
+}
