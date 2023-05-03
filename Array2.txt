@@ -15,7 +15,8 @@ int main()
     
      //  Arrays Input Output Update
      
-     int marks[100];
+     int marks[100] = {0}; // In this case the values except assigned ones will become 0
+     
      
      int n;
      cout<<"Enter the no of student";
