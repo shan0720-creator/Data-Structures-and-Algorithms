@@ -1,0 +1,43 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"Hello World";
+
+    return 0;
+}
+
+
+/*   
+   An Array is a collection of elements of the same type
+   placed in contiguous memory locations
+   
+   .Creation
+   .Input
+   .Output
+   .Update
+   
+
+ */
+ 
+ 
+ int a[100] // allocate 400 bytes
+ int a[100] = {0} //first element is 0  and rest are automatically allocated 0
+ int a[100] = {1,2,3} // The first three elements are 1,2,3
+ int a[] = {1,2,3};
+ string fruits[4] = {"apple","mango","guava"};
+ 
+ 
+ 
+ 
+ 
