@@ -1,0 +1,39 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+
+void PrintArr(int arr[], int n){
+    for(int i = 0; i <n ; i++){
+        cout<<arr[i];
+    }
+}
+
+void swapAlternate(int arr[],int n){
+    for(int i = 0 ; i <n; i+=2){
+        if(i+1< n){
+            swap(arr[i],arr[i+1]);
+        }
+    }
+    
+}
+
+int main()
+{
+    
+    int evenArr[4] =  {1,2,3,4};
+    int oddArr[5] = {1,2,3,4,5};
+    
+    swapAlternate(evenArr,4);
+    PrintArr(evenArr,4);
+
+    return 0;
+}
