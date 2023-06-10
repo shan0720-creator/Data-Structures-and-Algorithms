@@ -1,0 +1,58 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int getMax(int nums[], int n ){
+    
+    int max = INT_MIN;
+    
+    for(int i = 0; i<n; i++){
+        if(nums[i]>max){
+            max = nums[i];
+        }
+    }
+    return max;
+    
+}
+
+int getMin(int nums[], int n){
+    int min = INT_MAX;
+    
+    for(int i = 0; i<n; i++){
+        if(nums[i]< min){
+            min = nums[i];
+        }
+    }
+    return min;
+}
+
+
+int main(){
+    
+    
+    int size;
+    cin>>size;
+    int nums[1000];
+    
+    for(int i = 0; i<size; i++){
+        cin>>nums[i];
+    }
+    
+     int ans =  getMax(nums,size);
+     cout<<ans<<endl;
+     
+     int ans2 = getMin(nums,size);
+     cout<<ans2<<endl;
+}
+
+
+
